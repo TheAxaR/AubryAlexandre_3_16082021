@@ -1,0 +1,19 @@
+{
+  "name": "aubryalexandre_3_16082021",
+  "version": "1.0.0",
+  "description": "Projet Oh My Food",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheAxaR/AubryAlexandre_3_16082021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheAxaR/AubryAlexandre_3_16082021/issues"
+  },
+  "homepage": "https://github.com/TheAxaR/AubryAlexandre_3_16082021#readme"
+}
