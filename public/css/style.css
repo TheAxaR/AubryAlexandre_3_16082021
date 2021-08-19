@@ -1,11 +1,17 @@
 .main__wrapper {
   width: 767px;
-  margin: auto;
-  background-color: grey;
+  margin: 0 auto;
+  background-color: #eaeaea;
 }
 
-* {
+body {
   font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
 }
 
 .header {
@@ -15,6 +21,8 @@
   align-items: center;
   justify-content: space-around;
   background-color: white;
+  margin-bottom: 10px;
+  box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.2);
 }
 
 .header__backhome {
@@ -38,29 +46,37 @@
 }
 
 .localisation {
-  width: 45%;
+  width: 50%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: white;
 }
 .localisation .localisation__logo {
   width: 30px;
-  height: 30px;
+  height: 25px;
   margin: 5px 15px 0px 15px;
 }
 .localisation .localisation__logo img {
-  max-height: 100%;
+  max-height: 95%;
 }
 .localisation .localisation__form {
-  width: 100%;
+  width: 80%;
 }
 .localisation .localisation__form input {
   border: none;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   font-weight: bold;
-  margin-left: 30px;
+  max-width: 100%;
+  background-color: #eaeaea;
+}
+
+.concept {
+  background-color: #f6f6f6;
+}
+
+.steps {
+  background-color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

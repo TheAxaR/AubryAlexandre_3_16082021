@@ -22,7 +22,7 @@
     <title>ohmyfood</title>
     <link
         rel="stylesheet"
-        href="../public/css/style.css"
+        href="css/style.css"
     >
     <link
         rel="preconnect"
@@ -48,169 +48,169 @@
     >
 </head>
 
-<body>
-    <div class="main__wrapper">
-        <header class="header">
-            <div class="header__backhome">
+<body class="main__wrapper">
+
+    <header class="header">
+        <div class="header__backhome">
+            <img
+                src="images/icones/arrow-left-solid.svg"
+                alt="flèche accuil"
+            >
+        </div>
+        <h1 class="header__title">ohmyfood</h1>
+        <div class="header__invisiblejustifier">
+
+        </div>
+
+    </header>
+    <main>
+        <div class="localisation">
+            <div class="localisation__logo">
                 <img
-                    src="images/icones/arrow-left-solid.svg"
-                    alt="flèche accuil"
+                    src="images/icones/map-marker-alt-solid.svg"
+                    alt="logo localisation"
                 >
             </div>
-            <h1 class="header__title">ohmyfood</h1>
-            <div class="header__invisiblejustifier">
-
-            </div>
-
-        </header>
-        <main>
-            <div class="localisation">
-                <div class="localisation__logo">
-                    <img
-                        src="images/icones/map-marker-alt-solid.svg"
-                        alt="logo localisation"
+            <div class="localisation__form">
+                <form> <input
+                        type="text"
+                        id="town"
+                        name="town"
+                        value="Paris, Belleville"
                     >
-                </div>
-                <div class="localisation__form">
-                    <form> <input
-                            type="text"
-                            id="town"
-                            name="town"
-                            value="Paris, Belleville"
-                        >
-                    </form>
-                </div>
+                </form>
             </div>
-            <div class="concept">
-                <h2 class="concept__title">Réservez le menu qui vous convient</h2>
-                <p class="concept__citation">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                <button class="concept__button">Explorer nos restaurants</button>
-            </div>
-            <div class="steps">
-                <h2 class="steps__title">Fonctionnement</h2>
-                <div class="steps__button">
-                    <p class="steps__button__number">1</p>
-                    <img
-                        class="steps__button__logo"
-                        src="images/icones/mobile-alt-solid.svg"
-                        alt="icone téléphone"
-                    ></img>
-                    <p class="steps__button__instruction">Choisissez un restaurant</p>
-                </div>
-                <div class="steps__button">
-                    <p class="steps__button__number">2</p>
-                    <img
-                        class="steps__button__logo"
-                        src="images/icones/list-ul-solid.svg"
-                        alt="icone liste"
-                    ></img>
-                    <p class="steps__button__instruction">Composez votre menu</p>
-                </div>
-                <div class="steps__button steps__button--active">
-                    <p class="steps__button__number">3</p>
-                    <img
-                        class="steps__button__logo"
-                        src="images/icones/store-solid.svg"
-                        alt="icone magasin"
-                    ></img>
-                    <p class="steps__button__instruction">Dégustez au restaurant</p>
-                </div>
-            </div>
-            <div class="restaurants">
-                <div class="card card--new">
-                    <div class="card__photo">
-                        <div class="card__photo--new"></div>
-                    </div>
-                    <div class="card__comments">
-                        <h3 class="card__comments__name">La Palette du goût</h3>
-                        <p class="card__comments__situation">Ménilmontant</p>
-                        <img
-                            class="card__comments__fave"
-                            src="images/icones/heart-regular.svg"
-                            alt="favori"
-                        >
-                    </div>
-                </div>
-
-                <div class="card card--new">
-                    <div class="card__photo">
-                        <div class="card__photo--new"></div>
-                    </div>
-                    <div class="card__comments">
-                        <h3 class="card__comments__name">La Note enchantée</h3>
-                        <p class="card__comments__situation">Charonne</p>
-                        <img
-                            class="card__comments__fave"
-                            src="images/icones/heart-regular.svg"
-                            alt="favori"
-                        >
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card__photo">
-                        <div class="card__photo--new"></div>
-                    </div>
-                    <div class="card__comments">
-                        <h3 class="card__comments__name">À la française</h3>
-                        <p class="card__comments__situation">Cité Rouge</p>
-                        <img
-                            class="card__comments__fave"
-                            src="images/icones/heart-regular.svg"
-                            alt="favori"
-                        >
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card__photo">
-                        <div class="card__photo--new"></div>
-                    </div>
-                    <div class="card__comments">
-                        <h3 class="card__comments__name">Le délice des sens</h3>
-                        <p class="card__comments__situation">Folie-Méricourt</p>
-                        <img
-                            class="card__comments__fave"
-                            src="images/icones/heart-regular.svg"
-                            alt="favori"
-                        >
-                    </div>
-                </div>
-            </div>
-        </main>
-        <footer class="footer">
-            <div class="footer__title">
+        </div>
+        <div class="concept">
+            <h2 class="concept__title">Réservez le menu qui vous convient</h2>
+            <p class="concept__citation">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+            <button class="concept__button">Explorer nos restaurants</button>
+        </div>
+        <div class="steps">
+            <h2 class="steps__title">Fonctionnement</h2>
+            <div class="steps__button">
+                <p class="steps__button__number">1</p>
                 <img
-                    class="footer__title__logo"
-                    src="images/logo/ohmyfood@2x.svg"
-                    alt="logo"
-                >
+                    class="steps__button__logo"
+                    src="images/icones/mobile-alt-solid.svg"
+                    alt="icone téléphone"
+                ></img>
+                <p class="steps__button__instruction">Choisissez un restaurant</p>
             </div>
-            <ul class="footer__list">
-                <li> <img
-                        class="footer__list__logo"
-                        src="images/icones/utensils-solid.svg"
-                        alt="couverts"
+            <div class="steps__button">
+                <p class="steps__button__number">2</p>
+                <img
+                    class="steps__button__logo"
+                    src="images/icones/list-ul-solid.svg"
+                    alt="icone liste"
+                ></img>
+                <p class="steps__button__instruction">Composez votre menu</p>
+            </div>
+            <div class="steps__button steps__button--active">
+                <p class="steps__button__number">3</p>
+                <img
+                    class="steps__button__logo"
+                    src="images/icones/store-solid.svg"
+                    alt="icone magasin"
+                ></img>
+                <p class="steps__button__instruction">Dégustez au restaurant</p>
+            </div>
+        </div>
+        <div class="restaurants">
+            <div class="card card--new">
+                <div class="card__photo">
+                    <div class="card__photo--new"></div>
+                </div>
+                <div class="card__comments">
+                    <h3 class="card__comments__name">La Palette du goût</h3>
+                    <p class="card__comments__situation">Ménilmontant</p>
+                    <img
+                        class="card__comments__fave"
+                        src="images/icones/heart-regular.svg"
+                        alt="favori"
                     >
-                    <p class="footer__list__text">Proposer un restaurant</p>
-                </li>
-                <li> <img
-                        class="footer__list__logo"
-                        src="images/icones/handshake-solid.svg"
-                        alt="serrage de mains"
-                    >
-                    <p class="footer__list__text">Devenir partenaire</p>
-                </li>
-                <li>
-                    <p class="footer__list__text">Mentions légales</p>
-                </li>
-                <li>
-                    <p class="footer__list__text">Contact</p>
-                </li>
-            </ul>
+                </div>
+            </div>
 
-        </footer>
-    </div>
+            <div class="card card--new">
+                <div class="card__photo">
+                    <div class="card__photo--new"></div>
+                </div>
+                <div class="card__comments">
+                    <h3 class="card__comments__name">La Note enchantée</h3>
+                    <p class="card__comments__situation">Charonne</p>
+                    <img
+                        class="card__comments__fave"
+                        src="images/icones/heart-regular.svg"
+                        alt="favori"
+                    >
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__photo">
+                    <div class="card__photo--new"></div>
+                </div>
+                <div class="card__comments">
+                    <h3 class="card__comments__name">À la française</h3>
+                    <p class="card__comments__situation">Cité Rouge</p>
+                    <img
+                        class="card__comments__fave"
+                        src="images/icones/heart-regular.svg"
+                        alt="favori"
+                    >
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__photo">
+                    <div class="card__photo--new"></div>
+                </div>
+                <div class="card__comments">
+                    <h3 class="card__comments__name">Le délice des sens</h3>
+                    <p class="card__comments__situation">Folie-Méricourt</p>
+                    <img
+                        class="card__comments__fave"
+                        src="images/icones/heart-regular.svg"
+                        alt="favori"
+                    >
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__title">
+            <img
+                class="footer__title__logo"
+                src="images/logo/ohmyfood@2x.svg"
+                alt="logo"
+            >
+        </div>
+        <ul class="footer__list">
+            <li> <img
+                    class="footer__list__logo"
+                    src="images/icones/utensils-solid.svg"
+                    alt="couverts"
+                >
+                <p class="footer__list__text">Proposer un restaurant</p>
+            </li>
+            <li> <img
+                    class="footer__list__logo"
+                    src="images/icones/handshake-solid.svg"
+                    alt="serrage de mains"
+                >
+                <p class="footer__list__text">Devenir partenaire</p>
+            </li>
+            <li>
+                <p class="footer__list__text">Mentions légales</p>
+            </li>
+            <li>
+                <p class="footer__list__text">Contact</p>
+            </li>
+        </ul>
+
+    </footer>
+
 </body>
 
 </html>
