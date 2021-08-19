@@ -1,0 +1,25 @@
+.localisation {
+  width: 45%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  .localisation__logo {
+    width: 30px;
+    height: 30px;
+    margin: 5px 15px 0px 15px;
+    img {
+      max-height: 100%;
+    }
+  }
+  .localisation__form {
+    width: 100%;
+    input {
+      border: none;
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-left: 30px;
+    }
+  }
+}

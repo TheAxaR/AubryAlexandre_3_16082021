@@ -1,11 +1,11 @@
-* {
-  font-family: "Roboto", sans-serif;
-}
-
 .main__wrapper {
   width: 767px;
   margin: auto;
   background-color: grey;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
 }
 
 .header {
@@ -29,6 +29,7 @@
 .header__title {
   font-family: "Shrikhand", cursive;
   font-size: 4rem;
+  margin: 20px 0px 10px 0px;
 }
 
 .header__invisiblejustifier {
@@ -37,7 +38,7 @@
 }
 
 .localisation {
-  width: 50%;
+  width: 45%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -57,7 +58,7 @@
 }
 .localisation .localisation__form input {
   border: none;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: bold;
   margin-left: 30px;
 }
