@@ -1,0 +1,38 @@
+.concept__button {
+  padding: 0.9em;
+  font-size: 2.1em;
+  border-radius: 50px;
+  color: white;
+  @include shadow;
+  border: none;
+  background: $secondary-color;
+  background: linear-gradient(165deg, $secondary-color 0%, $primary-color 100%);
+  margin: 0.6em auto 2.1em;
+}
+
+.steps__button {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0.9em;
+  border-radius: 25px;
+  border: none;
+  background-color: $light-grey;
+  .steps__button__logo {
+    height: 32px;
+    width: 32px;
+    filter: opacity(50%);
+  }
+
+  p {
+    font-weight: 400;
+  }
+}
+
+.steps__button--active {
+  background-color: #f6efff;
+  .steps__button__logo {
+    filter: invert(71%) sepia(84%) saturate(6555%) hue-rotate(243deg)
+      brightness(92%) contrast(86%);
+  }
+}
