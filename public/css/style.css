@@ -76,20 +76,37 @@ p {
 
 .steps__button {
   display: flex;
+  align-items: center;
+  justify-content: start;
   width: 100%;
-  margin: 0;
+  margin: 3.6em 0;
   padding: 0.9em;
-  border-radius: 25px;
+  border-radius: 2.5em;
   border: none;
   background-color: #f6f6f6;
+  box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.2);
+}
+.steps__button .steps__button__number {
+  position: relative;
+  font-size: 1.7em;
+  height: 1.7em;
+  width: 1.7em;
+  left: -1.2em;
+  line-height: 1.7em;
+  border-radius: 0.9em;
+  background-color: #9356dc;
+  color: white;
 }
 .steps__button .steps__button__logo {
-  height: 32px;
-  width: 32px;
+  height: 3em;
+  width: 3em;
+  margin-left: 1em;
   filter: opacity(50%);
 }
-.steps__button p {
-  font-weight: 400;
+.steps__button .steps__button__instruction {
+  font-weight: 600;
+  font-size: 2.5em;
+  margin-left: 2em;
 }
 
 .steps__button--active {
