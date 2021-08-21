@@ -116,6 +116,26 @@ p {
   filter: invert(71%) sepia(84%) saturate(6555%) hue-rotate(243deg) brightness(92%) contrast(86%);
 }
 
+.card {
+  height: 32em;
+  width: 100%;
+  border: 2px solid red;
+}
+.card .card__photo {
+  max-width: 100%;
+  height: 70%;
+}
+.card .card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 -6em;
+}
+.card .card__comments {
+  max-width: 100%;
+  height: 30%;
+}
+
 .localisation {
   width: 50%;
   margin: 1.5em auto 1.5em;
@@ -162,6 +182,11 @@ p {
 }
 .steps .steps__title {
   margin: 0;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 6em 2.5em;
 }
 
 /*# sourceMappingURL=style.css.map */
