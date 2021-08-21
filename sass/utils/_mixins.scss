@@ -5,3 +5,14 @@
 @mixin padding-block {
   padding: 6em 2.5em;
 }
+
+@mixin logo-size {
+  width: 3em;
+  height: 3em;
+}
+
+@mixin photo-sizer {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
