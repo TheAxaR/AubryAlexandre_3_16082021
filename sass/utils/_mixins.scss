@@ -3,7 +3,7 @@
 }
 
 @mixin padding-block {
-  padding: 6em 2.5em;
+  padding: 3em 2.5em;
 }
 
 @mixin logo-size {
@@ -15,4 +15,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@mixin black-to-white-filter {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(3deg)
+    brightness(100%) contrast(104%);
 }

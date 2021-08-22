@@ -46,9 +46,6 @@
 .steps {
   background-color: white;
   @include padding-block;
-  .steps__title {
-    margin: 0;
-  }
 }
 
 .restaurants {
