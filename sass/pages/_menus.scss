@@ -7,23 +7,64 @@
 }
 
 .menu {
-  border-radius: 4em;
-  //   border: 2px solid red;
-  overflow: overlay;
-  background-color: white;
+  background-color: $light-grey;
   .menu__header {
-    @include padding-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4em 4em 0 0;
+    padding: 4em 5em 2em 2.5em;
+    transform: translateY(-3em);
+    background-color: $light-grey;
     .menu__title {
       font-family: "Shrikhand", cursive;
-      margin-top: 0;
+      margin: 0;
       font-weight: 500;
       font-size: 3.5em;
     }
     .menu__fave {
-      position: relative;
-      left: 1em;
-      bottom: 1em;
       @include logo-size;
     }
+  }
+}
+
+.meal-type {
+  display: flex;
+  flex-direction: column;
+  padding: 0em 2.5em 6em 2.5em;
+  .meal-type__title {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
+  }
+  .meal-type__options {
+    border-radius: 25px;
+    background-color: white;
+
+    display: flex;
+    height: 10em;
+    border: none;
+    margin-bottom: 2.5em;
+    @include shadow;
+    .meal-type__options__text {
+      width: 100%;
+      text-align: left;
+      padding-left: 1em;
+      h3 {
+        margin: 0;
+        padding: 1em 0em 0.5em 0em;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+  .meal-type__options__price {
+    align-self: flex-end;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 0.5em;
+    padding-right: 1em;
   }
 }
