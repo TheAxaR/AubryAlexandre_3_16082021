@@ -9,9 +9,8 @@
   background: linear-gradient(165deg, $secondary-color 0%, $primary-color 100%);
   margin: 0.6em auto 2.1em;
   &--centered {
-    margin: 0 auto;
+    margin-left: calc(50% - 6em);
     width: 12em;
-    margin: 0 0 4em 5.5em;
   }
 }
 

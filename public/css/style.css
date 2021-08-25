@@ -113,9 +113,8 @@ a {
   margin: 0.6em auto 2.1em;
 }
 .concept__button--centered {
-  margin: 0 auto;
+  margin-left: calc(50% - 6em);
   width: 12em;
-  margin: 0 0 4em 5.5em;
 }
 
 .steps__button {
@@ -324,8 +323,16 @@ a {
 }
 .meal-type .meal-type__title {
   margin-top: 0;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.25em;
   text-transform: uppercase;
+}
+.meal-type .meal-type__title::after {
+  content: "";
+  width: 2.5em;
+  height: 5px;
+  background-color: #99e2d0;
+  display: block;
+  margin-top: 0.25em;
 }
 .meal-type .meal-type__options {
   border-radius: 25px;
