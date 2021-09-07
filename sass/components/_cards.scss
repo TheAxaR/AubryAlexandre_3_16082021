@@ -43,9 +43,33 @@
     }
     .card__comments__fave {
       @include logo-size;
-      position: relative;
+      // position: relative;
       left: 35em;
       bottom: 5em;
+      opacity: 1;
+      z-index: 1;
+    }
+    .card__comments__full {
+      width: 4em;
+      height: 3em;
+      position: relative;
+      left: 31.75em;
+      bottom: 5em;
+      stroke: black;
+      stroke-width: 55px;
+      fill: transparent;
+      // transition: fill 2s ease;
+
+      &:hover {
+        fill: $secondary-color;
+        transition: all 333ms ease;
+        stroke: $primary-color;
+      }
+
+      // transition: fill 330ms ease-out;
+
+      // opacity: 0;
+      // z-index: 0;
     }
   }
 }
