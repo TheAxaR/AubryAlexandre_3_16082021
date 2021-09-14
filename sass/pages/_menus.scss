@@ -23,7 +23,36 @@
       font-size: 3.5em;
     }
     .menu__fave {
-      @include logo-size;
+      font-size: 3em;
+      opacity: 1;
+      background-color: black;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      z-index: 2;
+      &:hover {
+        &::after {
+          opacity: 1;
+        }
+      }
+      &::after {
+        content: "\f004";
+        position: absolute;
+        left: 13.31em;
+        font-weight: bold;
+        color: transparent;
+        background: linear-gradient(
+          165deg,
+          $secondary-color 0%,
+          $primary-color 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+        z-index: 1;
+        transition: all 1s ease-in-out;
+        -webkit-text-stroke: 3px black;
+        transform: scale(0.84);
+      }
     }
   }
 }
@@ -47,26 +76,46 @@
     }
   }
   .meal-type__options {
+    padding: 0 0 0 6px;
     border-radius: 25px;
     background-color: white;
-
     display: flex;
     height: 10em;
     border: none;
     margin-bottom: 2.5em;
     @include shadow;
-    .meal-type__options__text {
-      width: 100%;
-      text-align: left;
-      padding-left: 1em;
-      h3 {
-        margin: 0;
-        padding: 1em 0em 0.5em 0em;
+    &:hover + .check-container {
+      width: 30%;
+    }
+    .check-container {
+      width: 0%;
+      height: 100%;
+      background-color: #99e2d0;
+      border-radius: 0 25px 25px 0;
+      transition: transform 330ms ease-in-out;
+
+      .meal-type__options__check {
+        display: flex;
+        height: inherit;
+        font-size: 3.5em;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        transform: translate(200px) rotate(360deg);
       }
-      p {
-        margin: 0;
-        padding: 0;
-      }
+    }
+  }
+  .meal-type__options__text {
+    width: 100%;
+    text-align: left;
+    padding-left: 1em;
+    h3 {
+      margin: 0;
+      padding: 1em 0em 0.5em 0em;
+    }
+    p {
+      margin: 0;
+      padding: 0;
     }
   }
   .meal-type__options__price {
