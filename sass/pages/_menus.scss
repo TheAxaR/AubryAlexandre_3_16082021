@@ -76,6 +76,7 @@
     }
   }
   .meal-type__options {
+    overflow: hidden;
     padding: 0 0 0 6px;
     border-radius: 25px;
     background-color: white;
@@ -84,15 +85,19 @@
     border: none;
     margin-bottom: 2.5em;
     @include shadow;
-    &:hover + .check-container {
+    &:hover .check-container {
       width: 30%;
+      .meal-type__options__check {
+        transform: rotate(0deg);
+      }
     }
+
     .check-container {
       width: 0%;
       height: 100%;
       background-color: #99e2d0;
       border-radius: 0 25px 25px 0;
-      transition: transform 330ms ease-in-out;
+      transition: width 330ms ease-in-out;
 
       .meal-type__options__check {
         display: flex;
@@ -101,7 +106,8 @@
         justify-content: center;
         align-items: center;
         color: white;
-        transform: translate(200px) rotate(360deg);
+        transform: rotate(360deg);
+        transition: transform 330ms ease-in-out;
       }
     }
   }
