@@ -8,6 +8,20 @@
 
 .menu {
   background-color: $light-grey;
+  .starters {
+    opacity: 0;
+    animation: menu-fade-in ease-in-out 1500ms 0.1s forwards;
+  }
+  .mains {
+    opacity: 0;
+    animation: menu-fade-in ease-in-out 1500ms 1s forwards;
+  }
+
+  .desserts {
+    opacity: 0;
+    animation: menu-fade-in ease-in-out 1500ms 1.5s forwards;
+  }
+
   .menu__header {
     display: flex;
     align-items: center;
@@ -84,6 +98,7 @@
     height: 10em;
     border: none;
     margin-bottom: 2.5em;
+
     @include shadow;
     &:hover .check-container {
       width: 30%;
@@ -115,13 +130,23 @@
     width: 100%;
     text-align: left;
     padding-left: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
     h3 {
       margin: 0;
       padding: 1em 0em 0.5em 0em;
+      text-overflow: inherit;
+      overflow: inherit;
+      white-space: inherit;
     }
     p {
       margin: 0;
       padding: 0;
+      text-overflow: inherit;
+      overflow: inherit;
+      white-space: inherit;
     }
   }
   .meal-type__options__price {

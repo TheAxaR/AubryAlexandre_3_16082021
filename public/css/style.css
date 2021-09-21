@@ -1,4 +1,57 @@
 @charset "UTF-8";
+@keyframes menu-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-2em);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner-fade-out {
+  60% {
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    display: contents;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    display: contents;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+    overflow: auto;
+  }
+}
+@keyframes police-partout-scrollbar-nulle-part {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: auto;
+  }
+}
 .main-wrapper {
   width: 767px;
   margin: 0 auto;
@@ -261,6 +314,45 @@ a {
   border-radius: 0.15em;
 }
 
+.spinner {
+  animation: spinner-fade-out ease-in-out 1.5s forwards;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  display: inline-block;
+  width: 10em;
+  height: 10em;
+}
+.spinner::after {
+  content: " ";
+  display: block;
+  width: 10em;
+  height: 10em;
+  margin: -1em;
+  border-radius: 50%;
+  border: 1em solid #9356dc;
+  border-color: #9356dc transparent #ff79da transparent;
+  animation: spinner 1.2s linear infinite;
+}
+
+.unscrolled {
+  animation: police-partout-scrollbar-nulle-part 2.6s;
+}
+.unscrolled .header {
+  animation: fade-in 1.5s forwards;
+}
+.unscrolled .header .header__backhome {
+  display: none;
+}
+.unscrolled .main {
+  animation: fade-in 1.5s forwards;
+}
+.unscrolled .footer {
+  animation: fade-in 1.5s forwards;
+}
+
 .localisation {
   width: 50%;
   margin: 1.5em auto 1.5em;
@@ -321,6 +413,18 @@ a {
 
 .menu {
   background-color: #f6f6f6;
+}
+.menu .starters {
+  opacity: 0;
+  animation: menu-fade-in ease-in-out 1500ms 0.1s forwards;
+}
+.menu .mains {
+  opacity: 0;
+  animation: menu-fade-in ease-in-out 1500ms 1s forwards;
+}
+.menu .desserts {
+  opacity: 0;
+  animation: menu-fade-in ease-in-out 1500ms 1.5s forwards;
 }
 .menu .menu__header {
   display: flex;
@@ -420,14 +524,23 @@ a {
   width: 100%;
   text-align: left;
   padding-left: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .meal-type .meal-type__options__text h3 {
   margin: 0;
   padding: 1em 0em 0.5em 0em;
+  text-overflow: inherit;
+  overflow: inherit;
+  white-space: inherit;
 }
 .meal-type .meal-type__options__text p {
   margin: 0;
   padding: 0;
+  text-overflow: inherit;
+  overflow: inherit;
+  white-space: inherit;
 }
 .meal-type .meal-type__options__price {
   align-self: flex-end;

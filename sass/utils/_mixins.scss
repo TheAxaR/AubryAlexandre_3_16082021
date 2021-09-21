@@ -21,3 +21,88 @@
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(3deg)
     brightness(100%) contrast(104%);
 }
+
+// @mixin animate($str) {
+//   -webkit-animation: #{$str};
+//   -moz-animation: #{$str};
+//   -ms-animation: #{$str};
+//   -o-animation: #{$str};
+//   animation: #{$str};
+// }
+
+// @mixin keyframes($menu-fade-in) {
+//   @-webkit-keyframes #{$menu-fade-in} {
+//     @content;
+//   }
+//   @-moz-keyframes #{$menu-fade-in} {
+//     @content;
+//   }
+//   @-ms-keyframes #{$menu-fade-in} {
+//     @content;
+//   }
+//   @-o-keyframes #{$menu-fade-in} {
+//     @content;
+//   }
+//   @keyframes #{$menu-fade-in} {
+//     @content;
+//   }
+// }
+
+@keyframes menu-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-2em);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-fade-out {
+  60% {
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    display: contents;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    display: contents;
+  }
+
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+    overflow: auto;
+  }
+}
+
+@keyframes police-partout-scrollbar-nulle-part {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: auto;
+  }
+}
