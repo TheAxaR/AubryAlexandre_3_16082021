@@ -35,3 +35,18 @@
     }
   }
 }
+
+@media all and (min-width: 768px) {
+  .footer {
+    .footer__list {
+      display: flex;
+      li {
+        width: 25%;
+        justify-content: space-evenly;
+        .footer__list__text {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+}

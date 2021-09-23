@@ -38,7 +38,7 @@
   }
 }
 .localisation {
-  width: 50%;
+  width: 20em;
   margin: 1.5em auto 1.5em;
   display: flex;
   justify-content: space-around;
@@ -90,4 +90,146 @@
 .restaurants {
   background-color: $light-grey;
   @include padding-block;
+}
+
+@media all and (min-width: 768px) {
+  .main-wrapper {
+    width: 100%;
+  }
+  .concept {
+    .concept__title {
+      span::after {
+        content: "\00000a";
+        white-space: normal;
+      }
+    }
+    .concept__citation {
+      span::after {
+        content: "\00000a";
+        white-space: normal;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .main-wrapper {
+    width: 100%;
+  }
+  .card {
+    transform: scale(0.7);
+    transition: all 500ms ease-in-out;
+  }
+  .restaurants {
+    display: grid;
+    grid-template-columns: 482px 482px;
+    grid-template-rows: 0fr 359px 359px;
+    gap: 2em 2em;
+    grid-template-areas:
+      "restaurants__title restaurants__title"
+      "card-palette card-La-Note"
+      "card-la-francaise card-le-délice";
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .restaurants__title {
+    grid-area: restaurants__title;
+    justify-self: center;
+  }
+  .card-palette {
+    grid-area: card-palette;
+  }
+  .card-La-Note {
+    grid-area: card-La-Note;
+  }
+  .card-la-francaise {
+    grid-area: card-la-francaise;
+  }
+  .card-le-délice {
+    grid-area: card-le-délice;
+  }
+
+  .steps__button {
+    transform: scale(0.7);
+    transition: all 500ms ease-in-out;
+  }
+  .steps {
+    display: grid;
+    grid-template-columns: 575px 575px;
+    grid-template-rows: 0fr 160px 160px;
+    gap: 2em 2em;
+    grid-template-areas:
+      "steps__title steps__title"
+      "steps__button-1 steps__button-2"
+      "steps__button-3 .";
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .steps__title {
+    grid-area: steps__title;
+  }
+  .steps__button-1 {
+    grid-area: steps__button-1;
+  }
+  .steps__button-2 {
+    grid-area: steps__button-2;
+  }
+  .steps__button-3 {
+    grid-area: steps__button-3;
+  }
+}
+
+@media all and (min-width: 1525px) {
+  .restaurants {
+    display: grid;
+    grid-template-columns: 482px 482px 482px;
+    grid-template-rows: 0fr 359px 359px;
+    gap: 2em 2em;
+    grid-template-areas:
+      "restaurants__title restaurants__title restaurants__title"
+      "card-palette card-La-Note card-la-francaise"
+      "card-le-délice . .";
+    justify-items: center;
+    align-items: center;
+  }
+  .card-palette {
+    grid-area: card-palette;
+  }
+  .card-La-Note {
+    grid-area: card-La-Note;
+  }
+  .card-le-délice {
+    grid-area: card-le-délice;
+  }
+  .restaurants__title {
+    grid-area: restaurants__title;
+  }
+  .card-la-francaise {
+    grid-area: card-la-francaise;
+  }
+  .steps {
+    display: grid;
+    grid-template-columns: 575px 575px 575px;
+    grid-template-rows: 0 160px;
+    gap: 2em 2em;
+    grid-template-areas:
+      "steps__title steps__title steps__title"
+      "steps__button-1 steps__button-2 steps__button-3";
+    justify-items: center;
+    align-items: center;
+  }
+  .steps__button-1 {
+    grid-area: steps__button-1;
+  }
+  .steps__button-2 {
+    grid-area: steps__button-2;
+  }
+  .steps__button-3 {
+    grid-area: steps__button-3;
+  }
+  .steps__title {
+    grid-area: steps__title;
+  }
 }

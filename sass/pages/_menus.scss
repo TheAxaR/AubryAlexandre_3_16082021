@@ -1,6 +1,7 @@
 .menu__photo {
   max-width: 100%;
   height: 28em;
+  overflow: hidden;
   img {
     width: 100%;
   }
@@ -28,7 +29,7 @@
     justify-content: space-between;
     border-radius: 4em 4em 0 0;
     padding: 4em 5em 2em 2.5em;
-    transform: translateY(-3em);
+    transform: translateY(-3.5em);
     background-color: $light-grey;
     .menu__title {
       font-family: "Shrikhand", cursive;
@@ -50,8 +51,9 @@
       }
       &::after {
         content: "\f004";
-        position: absolute;
-        left: 13.31em;
+        position: relative;
+        left: -1em;
+        display: inline-block;
         font-weight: bold;
         color: transparent;
         background: linear-gradient(
@@ -155,5 +157,71 @@
     margin: 0;
     padding-bottom: 0.5em;
     padding-right: 1em;
+  }
+}
+
+@media all and (min-width: 1304px) {
+  .menu {
+    transition: all 500ms ease-in-out;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0fr 1fr 1fr 0fr;
+    gap: 0em 0em;
+    grid-template-areas:
+      "menu__header menu__header"
+      "starters mains"
+      "desserts ."
+      "concept__button--centered concept__button--centered";
+    justify-items: center;
+    align-items: center;
+  }
+  .menu__header {
+    grid-area: menu__header;
+    width: -webkit-fill-available;
+  }
+  .starters {
+    grid-area: starters;
+    width: 36em;
+  }
+  .mains {
+    grid-area: mains;
+    width: 36em;
+  }
+  .desserts {
+    grid-area: desserts;
+    width: 36em;
+  }
+  .concept__button--centered {
+    grid-area: concept__button--centered;
+  }
+}
+
+@media all and (min-width: 2032px) {
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0fr 1fr 0fr;
+    gap: 2em 2em;
+    grid-template-areas:
+      "menu__header menu__header menu__header"
+      "starters mains desserts"
+      "concept__button--centered concept__button--centered concept__button--centered";
+    justify-items: center;
+    align-items: center;
+  }
+  .menu__header {
+    grid-area: menu__header;
+  }
+  .starters {
+    grid-area: starters;
+  }
+  .mains {
+    grid-area: mains;
+  }
+  .desserts {
+    grid-area: desserts;
+  }
+  .concept__button--centered {
+    grid-area: concept__button--centered;
   }
 }
