@@ -737,7 +737,6 @@ a {
     gap: 0em 0em;
     grid-template-areas: "menu__header menu__header" "starters mains" "desserts ." "concept__button--centered concept__button--centered";
     justify-items: center;
-    align-items: center;
   }
 
   .menu__header {
